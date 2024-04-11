@@ -1,0 +1,219 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: none;
+}
+
+body {
+    background-color: hsl(0, 0%, 94%);
+    overflow: hidden;
+}
+
+@font-face {
+    font-family: popinsRegular;
+    src: url(fonts/Poppins-Regular.ttf) format(truetype);
+}
+
+@font-face {
+    font-family: popinsBold;
+    src: url(fonts/Poppins-Bold.ttf) format(truetype);
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 95vh;
+}
+
+.container {
+    background-color: hsl(0, 0%, 100%);
+    width: 600px;
+    max-width: 90%;
+    padding: 40px;
+    border-radius: 10px;
+    border-bottom-right-radius: 30%;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.container .botao-enviar {
+    display: flex;
+    align-items: center;
+    max-width: 100%;
+}
+
+.container .linha {
+    display: block;
+    background-color: rgba(0, 0, 0, 0.144);
+    width: 80%;
+    height: 4px;
+}
+
+.container .btn {
+    background-color: hsl(259, 100%, 65%);
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+    position: relative;
+    transition: 0.2s ease-in-out;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+    position: relative;
+    overflow: hidden;
+    font-size: 15px;
+    line-height: 15px;
+    user-select: none;
+    -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.btn span:first-child {
+  position: relative;
+  transition: color 600ms cubic-bezier(0.48, 0, 0.12, 1);
+  z-index: 10;
+}
+
+.btn span:last-child {
+  color: white;
+  display: block;
+  position: absolute;
+  bottom: 0;
+  transition: all 500ms cubic-bezier(0.48, 0, 0.12, 1);
+  z-index: 100;
+  opacity: 0;
+  top: 60%;
+  left: 50%;
+  transform: translateY(225%) translateX(-50%);
+  height: 14px;
+  line-height: 13px;
+}
+
+.btn:hover:after {
+  transform-origin: bottom center;
+  transform: skewY(9.3deg) scaleY(2);
+}
+
+.btn:hover span:last-child {
+  transform: translateX(-50%) translateY(-100%);
+  opacity: 1;
+  transition: all 900ms cubic-bezier(0.48, 0, 0.12, 1);
+}
+
+.container .btn:hover {
+    transform: scale(1.1);
+    background-color: #000;
+    color: #fff;
+}
+
+.container .btn:hover.btn::after {
+    opacity: 0;
+}
+
+.container .btn::after {
+    content: url(imagens/icon-arrow.svg);
+    opacity: 1;
+    transition: 0.2s ease-in-out;
+}
+
+.container .resultado h2 {
+    font-family: popinsBold, Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 50px;
+    padding-top: 30px;
+}
+
+.container .resultado .res {
+    color: hsl(259, 100%, 65%);
+    font-size: 80px;
+    font-family: popinsBold, Verdana, Geneva, Tahoma, sans-serif;
+    height: 100px;
+}
+
+.resultado {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.container .info {
+    display: flex;
+    gap: 25px;
+    margin-bottom: 20px;
+}
+
+.container .info .caixa-numero {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.container .info .caixa-numero label {
+    font-family: popinsRegular, Verdana, Geneva, Tahoma, sans-serif;
+    opacity: 8;
+}
+
+.container .info .caixa-numero input[type="number"] {
+    border: 1px solid black;
+    outline: none;
+    padding: 25px 10px;
+    font-size: 32px;
+    font-family: popinsBold, Verdana, Geneva, Tahoma, sans-serif;
+    color: #000;
+    width: 140px;
+    height: 40px;
+    border-radius: 5px;
+    transition: 0.2s ease-in-out;
+}
+
+.container .info .caixa-numero input[type="number"]:hover {
+    border: 1px solid hsl(259, 100%, 65%);
+}
+
+.container .info .caixa-numero span {
+    font-family: popinsRegular, Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 12px;
+    opacity: 1;
+    transition: 0.2s ease-in-out;
+}
+
+.container .info .caixa-numero .hide {
+    opacity: 0;
+}
+
+@media (max-width: 668px) {
+    .container .info {
+       gap: 15px;
+    }
+
+    .container .info .caixa-numero input[type="number"] {
+        width: 100%;
+        font-size: 22px;
+    }
+}
+
+@media (max-width: 440px) {
+    .container .btn {
+        width: 60px;
+        height: 60px;
+    }
+
+    .container .resultado .res {
+        font-size: 70px;
+    }
+
+    .container .resultado h2 {
+        font-size: 40px;
+        padding-top: 0;
+    }
+}
+
+@media (max-width: 328px) {
+    .container .resultado .res {
+        font-size: 50px;
+        padding-top: 20px;
+    }
+
+    .container .resultado h2 {
+        font-size: 30px;
+    }
+}
