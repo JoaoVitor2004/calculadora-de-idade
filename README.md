@@ -9,7 +9,7 @@ Este projeto tem o objetivo de calcular o tempo de vida apartir da data de nasci
 
 ### ⚙ Guia de instalação
 
-Ter apenas um navegador instalado em sua maquina e aceessar apartir deste <a href="">endereço</a>
+Ter apenas um navegador instalado em sua maquina e aceessar apartir deste <a href="https://joaovitor2004.github.io/calculadora-de-idade/">endereço</a>
 
 ### 🛠 Tecnologias utilizadas
 
