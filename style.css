@@ -55,65 +55,22 @@ main {
     width: 65px;
     height: 65px;
     border-radius: 50%;
-    position: relative;
-    transition: 0.2s ease-in-out;
     cursor: pointer;
     transition: 0.2s ease-in-out;
     position: relative;
     overflow: hidden;
     font-size: 15px;
-    line-height: 15px;
-    user-select: none;
-    -webkit-user-select: none;
-  touch-action: manipulation;
-}
-
-.btn span:first-child {
-  position: relative;
-  transition: color 600ms cubic-bezier(0.48, 0, 0.12, 1);
-  z-index: 10;
-}
-
-.btn span:last-child {
-  color: white;
-  display: block;
-  position: absolute;
-  bottom: 0;
-  transition: all 500ms cubic-bezier(0.48, 0, 0.12, 1);
-  z-index: 100;
-  opacity: 0;
-  top: 60%;
-  left: 50%;
-  transform: translateY(225%) translateX(-50%);
-  height: 14px;
-  line-height: 13px;
-}
-
-.btn:hover:after {
-  transform-origin: bottom center;
-  transform: skewY(9.3deg) scaleY(2);
-}
-
-.btn:hover span:last-child {
-  transform: translateX(-50%) translateY(-100%);
-  opacity: 1;
-  transition: all 900ms cubic-bezier(0.48, 0, 0.12, 1);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 25px;
+    border: none;
 }
 
 .container .btn:hover {
     transform: scale(1.1);
-    background-color: #000;
-    color: #fff;
-}
-
-.container .btn:hover.btn::after {
-    opacity: 0;
-}
-
-.container .btn::after {
-    content: url(imagens/icon-arrow.svg);
-    opacity: 1;
-    transition: 0.2s ease-in-out;
+    background-color: black;
 }
 
 .container .resultado h2 {
@@ -174,6 +131,10 @@ main {
     font-size: 12px;
     opacity: 1;
     transition: 0.2s ease-in-out;
+}
+
+.container .info .caixa-numero .erro {
+    color: red;
 }
 
 .container .info .caixa-numero .hide {
