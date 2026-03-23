@@ -5,9 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Caculadora de idade</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="./js/script.js" defer></script>
-    <link rel="shortcut icon" href="imagens/favicon-32x32.png" type="image/x-icon">
+    <link rel="stylesheet" href="./src/css/style.css">
+    <link rel="shortcut icon" href="./src/assets/images/favicon-32x32.png" type="image/x-icon">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 
@@ -16,19 +15,19 @@
         <div class="container" data-aos="fade-up">
             <div class="info">
                 <div class="caixa-numero">
-                    <label id="etiqueta1" for="dia">Dia</label>
+                    <label class="etiqueta" for="dia">Dia</label>
                     <input type="number" name="idade" id="dia" placeholder="DD">
-                    <span id="erro1" class="erro hide">este arquivo é obrigatório</span>
+                    <span class="erro hide">este arquivo é obrigatório</span>
                 </div>
                 <div class="caixa-numero">
-                    <label id="etiqueta2" for="mes">Mês</label>
+                    <label class="etiqueta" for="mes">Mês</label>
                     <input type="number" name="idade" id="mes" placeholder="MM">
-                    <span id="erro2" class="erro hide">este arquivo é obrigatório</span>
+                    <span class="erro hide">este arquivo é obrigatório</span>
                 </div>
                 <div class="caixa-numero">
-                    <label id="etiqueta3" for="ano">Ano</label>
+                    <label class="etiqueta" for="ano">Ano</label>
                     <input type="number" name="idade" id="ano" placeholder="YYYY">
-                    <span id="erro3" class="erro hide">este arquivo é obrigatório</span>
+                    <span class="erro hide">este arquivo é obrigatório</span>
                 </div>
             </div>
             <div class="botao-enviar">
@@ -36,19 +35,20 @@
                 <button class="btn" id="btn"><span class="text">Calcular</span></button>
             </div>
             <div class="resultado">
-                <span class="res" id="res1">- -</span>
+                <span class="data">- -</span>
                 <h2>Anos</h2>
             </div>
             <div class="resultado">
-                <span class="res" id="res2">- -</span>
+                <span class="data">- -</span>
                 <h2>Meses</h2>
             </div>
             <div class="resultado">
-                <span class="res" id="res3">- -</span>
+                <span class="data">- -</span>
                 <h2>Dias</h2>
             </div>
         </div>
     </main>
+    <script type="module" src="./dist/script.js" defer></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
         AOS.init();
